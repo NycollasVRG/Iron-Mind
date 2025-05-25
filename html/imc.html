@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/imc.css">
+    <title>IronMind - IMC</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../html/media/logo.png" alt="logo">
+                <img src="../media/IronMind.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../html/treinos.html">Treinos</a></li>
+                <li><a href="../html/contato.html">Contato</a></li>
+                <li><a href="../html/equipe.html">Equipe</a></li>
+            </ul>
+        </nav>
+        <a href="../html/consulta.html" class="btn-consulta active">Agendar Consulta</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Calcular IMC</h1>
+            <p>Qual seu peso ideal?</p>
+        </div>
+    </section>
+
+<main>
+
+    <script src="../js/imc.js"></script>
+    <div class="wrapper">
+        <!-- Formulário de IMC -->
+        <div class="container">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo">
+                <option value="masculino">Homem</option>
+                <option value="feminino">Mulher</option>
+            </select>
+
+            <label for="idade">Idade:</label>
+            <div id="center-texto">
+                <input type="number" id="idade">
+                <label for="">Em anos.</label>
+            </div>
+
+            <label for="altura">Altura:</label>
+            <div id="center-texto">
+                <input type="number" id="altura">
+                <label for="">Em Centímetros.</label>
+            </div>
+
+            <label for="peso">Peso:</label>
+            <div id="center-texto">
+                <input type="number" id="peso">
+                <label for="">Em Kilos.</label>
+            </div>
+
+            <div id="center-btn">
+                <button id="calcular" onclick="calcularIMC()">Calcular</button>
+            </div>
+
+            <div id="resultado">Resultado:<br> Seu IMC é de "N" kg/m².</div>
+        </div>
+
+        <!-- Tabela de Classificação -->
+        <div class="info-table">
+            <h2>IMC</h2>
+            <table>
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificação</th>
+                </tr>
+                <tr><td>Menor que 18,5</td><td>Magreza</td></tr>
+                <tr><td>18,5 a 24,9</td><td>Normal</td></tr>
+                <tr><td>25 a 29,9</td><td>Sobrepeso</td></tr>
+                <tr><td>30 a 34,9</td><td>Obesidade grau I</td></tr>
+                <tr><td>35 a 39,9</td><td>Obesidade grau II</td></tr>
+                <tr><td>Maior que 40</td><td>Obesidade grau III</td></tr>
+            </table>
+            <p class="note">*Como chegamos ao número à esquerda: o índice de massa corporal de um adulto é o seu peso em quilos (por exemplo, 80 kg), dividido por sua altura ao quadrado (vamos imaginar, 1,80 m x 1,80 m).</p>
+        </div>
+    </div>
+                
+</main>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>IronMind</h3>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/treinos.html">Treinos</a></li>
+                <li><a href="../html/contato.html">Contato</a></li>
+                <li><a href="../html/equipe.html">Equipe</a></li>
+                <li><a href="../html/consulta.html">Agendar Consulta</a></li>
+                <li><a href="https://cristiano202.github.io/Receitas-Urbanas-1/convite.html" target="_blank" rel="external">Receitas urbanas</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Treinos</h3>
+            <ul>
+                <li><a href="../html/treinos.html">Bíceps</a></li>
+                <li><a href="../html/treinos.html">Ombro</a></li>
+                <li><a href="../html/treinos.html">Peitoral</a></li>
+                <li><a href="../html/treinos.html">Costas</a></li>
+                <li><a href="../html/treinos.html">Pernas</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contato</h3>
+            <ul>
+                <li><a href="tel:+5511999999999">(11)
+                        99999-9999</a></li>
+                <li><a
+                        href="mailto:contato@ironmind.com">contato@ironmind.com</a></li>
+                <li><a href="#">Av. Paulista, 1000 - São Paulo</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2025 IronMind. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
