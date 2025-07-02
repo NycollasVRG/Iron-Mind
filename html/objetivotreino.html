@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/objetivotreino.css">
+    <title>Treinos por Objetivo</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../media/logo.png" alt="logo">
+                <img src="../media/IronMind.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../html/treinosmelhor.html">Treinos</a></li>
+                <li><a href="../html/contato.html">Contato</a></li>
+                <li><a href="../html/equipe.html">Equipe</a></li>
+                <li><a href="../html/planoalimentar.html">Plano Alimentar</a></li>
+                <li><a href="html/objetivotreino.html" class="active">Objetivo de Treino</a></li>
+            </ul>
+        </nav>
+        <a href="../html/consulta.html" class="btn-consulta active">Agendar Consulta</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Plano de Treino por Objetivo</h1>
+        </div>
+    </section>
+
+    <main>
+        <section class="nutrition-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Escolha seu Objetivo</h2>
+                    <p>Receba um plano de treino personalizado de acordo com seu foco</p>
+                </div>
+
+                <div class="nutrition-planner">
+                    <div class="form-group">
+                        <label for="goal">Seu Objetivo:</label>
+                        <select id="goal" class="form-control">
+                            <option value="">Selecione seu objetivo</option>
+                            <option value="hipertrofia">Hipertrofia (Ganho de Massa)</option>
+                            <option value="emagrecimento">Emagrecimento</option>
+                            <option value="manutencao">Manutenção Muscular</option>
+                        </select>
+                    </div>
+
+                    <button id="generate-plan" class="btn">Gerar Plano de Treino</button>
+
+                    <div id="nutrition-plan-result" class="plan-result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>IronMind</h3>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../html/treinos.html">Treinos</a></li>
+                    <li><a href="../html/contato.html">Contato</a></li>
+                    <li><a href="../html/consulta.html">Agendar Consulta</a></li>
+                    <li><a href="https://cristiano202.github.io/Receitas-Urbanas-1/convite.html" target="_blank" rel="external">Receitas urbanas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Treinos</h3>
+                <ul>
+                    <li><a href="../html/treinos.html">Bíceps</a></li>
+                    <li><a href="../html/treinos.html">Ombro</a></li>
+                    <li><a href="../html/treinos.html">Peitoral</a></li>
+                    <li><a href="../html/treinos.html">Costas</a></li>
+                    <li><a href="../html/treinos.html">Pernas</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <li><a href="mailto:contato@ironmind.com">contato@ironmind.com</a></li>
+                    <li><a href="#">Av. Paulista, 1000 - São Paulo</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 IronMind. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/objetivotreino.js"></script>
+</body>
+</html>
