@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/treinomelhor.css" />
+  <title>IronMind - Treinos</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <img src="../media/logo.png" alt="logo" />
+        <img src="../media/IronMind.png" alt="logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="treinosmelhor.html" class="active">Treinos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="equipe.html">Equipe</a></li>
+        <li><a href="planoalimentar.html">Plano Alimentar</a></li>
+        <li><a href="objetivotreino.html">Objetivo de Treino</a></li>
+      </ul>
+    </nav>
+    <a href="consulta.html" class="btn-consulta">Agendar Consulta</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Treino por Objetivo</h1>
+      <p>Escolha o grupo muscular e veja os treinos recomendados para seu objetivo</p>
+    </div>
+  </section>
+
+  <section class="workout-section container">
+    <div class="section-header">
+      <h2>Escolha o Grupo Muscular</h2>
+      <p>Selecione o grupo muscular desejado abaixo:</p>
+    </div>
+
+    <div class="workout-planner">
+      <div class="form-group">
+        <label for="muscle-group">Grupo Muscular</label>
+        <select id="muscle-group" class="form-control">
+          <option value="">Selecione</option>
+          <option value="biceps">Bíceps</option>
+          <option value="ombro">Ombro</option>
+          <option value="costas">Costas</option>
+        </select>
+      </div>
+
+      <button id="generate-workout" class="btn">Gerar Treino</button>
+
+      <div id="workout-result" class="plan-result"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>IronMind</h3>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="treinos.html">Treinos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="consulta.html">Agendar Consulta</a></li>
+          <li><a href="https://cristiano202.github.io/Receitas-Urbanas-1/convite.html" target="_blank">Receitas urbanas</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Treinos</h3>
+        <ul>
+          <li><a href="treinos.html#biceps">Bíceps</a></li>
+          <li><a href="treinos.html#ombro">Ombro</a></li>
+          <li><a href="treinos.html">Peitoral</a></li>
+          <li><a href="treinos.html">Costas</a></li>
+          <li><a href="treinos.html">Pernas</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+          <li><a href="mailto:contato@ironmind.com">contato@ironmind.com</a></li>
+          <li><a href="#">Av. Paulista, 1000 - São Paulo</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 IronMind. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/treinosmelhor.js"></script>
+</body>
+
+</html>
