@@ -347,4 +347,19 @@ footer {
         margin-bottom: 0;
         display: flex;
     }
+
+   
+input:invalid, select:invalid {
+    border-color: #ff4444;
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.3);
+}
+
+input:valid, select:valid {
+    border-color: #00C851;
+    box-shadow: 0 0 5px rgba(0, 200, 81, 0.3);
+}
+
+#phone {
+    font-family: monospace;
+}
 }

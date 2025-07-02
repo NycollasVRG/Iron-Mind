@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=], initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/consulta.css">
     <title>IronMind - Consulta</title>
 </head>
@@ -33,111 +32,110 @@
         </div>
     </section>
 
-<div class="container">
-    <div class="booking-wrapper">
-        
-        <div class="booking-content">
-            <form class="booking-form" action="#" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
+    <div class="container">
+        <div class="booking-wrapper">
+            <div class="booking-content">
+                <form class="booking-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
+                        <label for="phone">Telefone (com DDD)</label>
+                        <input type="tel" id="phone" name="phone" class="form-control"
+                            placeholder="(99) 99999-9999" required>
                     </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" required>
-                    </div>
-                    
+
                     <div class="form-group">
                         <label for="age">Idade</label>
                         <input type="number" id="age" name="age" class="form-control" min="16" max="100" required>
                     </div>
-                </div>
-                
-                <div class="form-consulta" id="consulta">
-                    <label>Tipo de Consulta</label>
-                    <div class="teste">
 
-                        <div class="form-check">
-                            <input type="radio" id="personal" name="consultation_type" value="personal" checked>
-                            <label for="personal">Personal Trainer</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" id="nutrition" name="consultation_type" value="nutrition">
-                            <label for="nutrition">Nutrição</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" id="physio" name="consultation_type" value="physio">
-                            <label for="physio">Fisioterapia</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" id="yoga" name="consultation_type" value="yoga">
-                            <label for="yoga">Yoga</label>
+                    <div class="form-consulta" id="consulta">
+                        <label>Tipo de Consulta</label>
+                        <div class="teste">
+                            <div class="form-check">
+                                <input type="radio" id="personal" name="consultation_type" value="Personal Trainer" checked>
+                                <label for="personal">Personal Trainer</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="nutrition" name="consultation_type" value="Nutrição">
+                                <label for="nutrition">Nutrição</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="physio" name="consultation_type" value="Fisioterapia">
+                                <label for="physio">Fisioterapia</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" id="yoga" name="consultation_type" value="Yoga">
+                                <label for="yoga">Yoga</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="date">Data Preferencial</label>
-                        <input type="date" id="date" name="date" class="form-control" required>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Data Preferencial</label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Horário Preferencial</label>
+                            <select id="time" name="time" class="form-control" required>
+                                <option value="">Selecione um horário</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                            </select>
+                        </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="time">Horário Preferencial</label>
-                        <select id="time" name="time" class="form-control" required>
-                            <option value="">Selecione um horário</option>
-                            <option value="08:00">08:00</option>
-                            <option value="09:00">09:00</option>
-                            <option value="10:00">10:00</option>
-                            <option value="11:00">11:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="15:00">15:00</option>
-                            <option value="16:00">16:00</option>
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                            <option value="19:00">19:00</option>
+                        <label for="goals">Seus Objetivos</label>
+                        <textarea id="goals" name="goals" class="form-control" placeholder="Descreva seus objetivos e expectativas..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Experiência Prévia</label>
+                        <select id="experience" name="experience" class="form-control" required>
+                            <option value="">Selecione seu nível de experiência</option>
+                            <option value="beginner">Iniciante (menos de 6 meses)</option>
+                            <option value="intermediate">Intermediário (6 meses a 2 anos)</option>
+                            <option value="advanced">Avançado (mais de 2 anos)</option>
+                            <option value="none">Nenhuma experiência</option>
                         </select>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="goals">Seus Objetivos</label>
-                    <textarea id="goals" name="goals" class="form-control" placeholder="Descreva seus objetivos e expectativas..."></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="experience">Experiência Prévia</label>
-                    <select id="experience" name="experience" class="form-control" required>
-                        <option value="">Selecione seu nível de experiência</option>
-                        <option value="beginner">Iniciante (menos de 6 meses)</option>
-                        <option value="intermediate">Intermediário (6 meses a 2 anos)</option>
-                        <option value="advanced">Avançado (mais de 2 anos)</option>
-                        <option value="none">Nenhuma experiência</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <div class="form-check">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">Concordo com os termos e condições</label>
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Concordo com os termos e condições</label>
+                        </div>
                     </div>
-                </div>
-                
-                <button type="submit" class="btn-consulta" id="botao">Agendar Consulta</button>
-            </form>
+
+                    <div class="form-group" style="text-align: center; margin-top: 20px;">
+                        <button type="submit" class="btn-consulta" id="botao">Agendar Consulta</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-    
+
 <footer>
     <div class="footer-content">
         <div class="footer-column">
@@ -184,6 +182,6 @@
         <p>&copy; 2025 IronMind. Todos os direitos reservados.</p>
     </div>
 </footer>
-<script src="../js/botaoconsulta.js"></script>
+ <script src="../js/botaoconsulta.js"></script>
 </body>
 </html>
