@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
   const workouts = {
+    peito: [
+      {
+        nome: "Supino Reto",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/peitoral/supino.png"
+      },
+      {
+        nome: "Cruxifixo",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/peitoral/cruxifixo.png"
+      },
+      {
+        nome: "Flexão de Braço",
+        descricao: "3 séries até a falha",
+        imagem: "../treinos/peitoral/flexaobraço.webp"
+      }
+    ],
     biceps: [
       {
         nome: "Rosca Direta",
@@ -49,6 +66,89 @@ document.addEventListener('DOMContentLoaded', function () {
         nome: "Puxada Frontal",
         descricao: "3 séries de 12 repetições",
         imagem: "../treinos/costas/treino3.png"
+      },
+      {
+        nome: "Encolhimento de Ombros com Barra",
+        descricao: "3 séries de 15 repetições",
+        imagem: "../treinos/costas/trapezio.webp"
+      }
+    ],
+    pernas: [
+      {
+        nome: "Agachamento",
+        descricao: "3 séries de 10-12 repetições",
+        imagem: "../treinos/pernas/agachamento.webp"
+      },
+      {
+        nome: "Cadeira Extensora",
+        descricao: "3 séries até a falha",
+        imagem: "../treinos/pernas/extensora.webp"
+      },
+      {
+        nome: "Stiff com Barra",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/pernas/stiff.jpg"
+      },
+      {
+        nome: "Mesa Flexora",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/pernas/flexora.webp"
+      },
+      {
+        nome: "Elevação Pélvica",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/pernas/elevaçao.webp"
+      }
+    ],
+    tricips: [
+      {
+        nome: "Mergulho entre Bancos",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/tricips/mergulho.webp"
+      },
+      {
+        nome: "Tricips na Polia",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/tricips/polia.webp"
+      },
+      {
+        nome: "Tricips Testa",
+        descricao: "3 séries de 12 repetições",
+        imagem: "../treinos/tricips/testa.webp"
+      }
+    ],
+    abdomen: [
+      {
+        nome: "Abdominal Infra",
+        descricao: "3 séries até a falha",
+        imagem: "../treinos/abdomen/infra.avif"
+      },
+      {
+        nome: "Prancha Isométrica",
+        descricao: "3 séries até a falha",
+        imagem: "../treinos/abdomen/prancha.jpg"
+      },
+      {
+        nome: "Abdominal Oblíquo",
+        descricao: "3 séries até a falha",
+        imagem: "../treinos/abdomen/obliquo.jpg"
+      }
+    ],
+    panturrilha: [
+      {
+        nome: "Elevação Sentado",
+        descricao: "3 séries de 15 repetições",
+        imagem: "../treinos/panturrilha/sentado.jpg"
+      },
+      {
+        nome: "Elevação em Pé",
+        descricao: "3 séries até a falha",
+        imagem: "../treinos/panturrilha/empe.webp"
+      },
+      {
+        nome: "Elevação Unilateral",
+        descricao: "3 séries de 15 repetições",
+        imagem: "../treinos/panturrilha/unilateral.webp"
       }
     ]
   };
