@@ -9,28 +9,31 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="../index.html">
-        <img src="../media/logo.png" alt="logo" />
-        <img src="../media/IronMind.png" alt="IronMind" />
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Início</a></li>
-        <li><a href="../html/treinosmelhor.html">Treinos</a></li>
-        <li><a href="../html/contato.html">Contato</a></li>
-        <li><a href="../html/equipe.html">Equipe</a></li>
-        <li><a href="../html/planoalimentar.html">Plano Alimentar</a></li>
-        <li><a href="../html/objetivotreino.html">Objetivo de Treino</a></li>
-        <li><a href="../html/imc.html">IMC</a></li>
-        <li><a href="../html/agenda.html">AGENDA</a></li>
-        <li><a href="../html/progressao.html" class="active">Progressão</a></li>
-      </ul>
-    </nav>
-    <a href="../html/consulta.html" class="btn-consulta">Agendar Consulta</a>
-  </header>
+     <header>
+  <div class="logo">
+    <a href="../index.html">
+     <img src="../media/logo.png" alt="logo" />
+      <img src="../media/IronMind.png" alt="logo" />
+    </a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+  <nav class="nav-mobile">
+    <ul class="nav-links">
+      <li><a href="../index.html" class="active">Inicio</a></li>
+      <li><a href="../html/treinosmelhor.html">Treinos</a></li>
+      <li><a href="../html/contato.html">Contato</a></li>
+      <li><a href="../html/equipe.html">Equipe</a></li>
+      <li><a href="../html/planoalimentar.html">Plano Alimentar</a></li>
+      <li><a href="../html/objetivotreino.html">Objetivo de Treino</a></li>
+      <li><a href="../html/imc.html">IMC</a></li>
+      <li><a href="../html/agenda.html"></a></li>
+      <li><a href="../html/progressao.html">Progressão</a></li>
+    </ul>
+  </nav>
+  <a href="../html/agenda.html" class="btn-consulta">AGENDA</a>
+</header>
 
   <div class="container">
     <h2>Gráfico de Progressão Semanal</h2>
@@ -50,7 +53,7 @@
   <footer>
     <p>&copy; 2025 IronMind. Todos os direitos reservados.</p>
   </footer>
-
+  <script src="../js/navDinamico.js"></script>
   <script src="../js/progressao.js"></script>
 </body>
 </html>

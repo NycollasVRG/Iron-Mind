@@ -408,3 +408,48 @@ footer {
     left: 10px;
   }
 }
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Estilos para mobile */
+@media (max-width: 1059px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.nav-mobile ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  nav.nav-mobile ul.show {
+    display: flex;
+  }
+
+  nav.nav-mobile ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .btn-consulta {
+    display: inline-block;
+    margin-left: auto;
+  }
+}
+
