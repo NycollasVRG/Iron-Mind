@@ -53,6 +53,17 @@ nav ul li a.active {
   border-bottom: 2px solid #ff6b00;
 }
 
+.btn {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .btn-consulta {
   background-color: #ff6b00;
   color: white;
