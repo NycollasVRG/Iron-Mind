@@ -7,47 +7,48 @@
     <title>IMC</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../media/logo.png" alt="logo" />
-                <img src="../media/IronMind.png" alt="logo" />
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html" class="active">Inicio</a></li>
-                <li><a href="../html/treinosmelhor.html">Treinos</a></li>
-                <li><a href="../html/contato.html">Contato</a></li>
-                <li><a href="../html/equipe.html">Equipe</a></li>
-                <li><a href="..html/planoalimentar.html">Plano Alimentar</a></li>
-                <li><a href="../html/objetivotreino.html">Objetivo de Treino</a></li>
-                <li><a href="imc.html">IMC</a></li>
-                <li><a href="agenda.html" class="active">AGENDA</a></li>
-                <li><a href="../html/progressao.html">Progressão</a></li>
-            </ul>
-        </nav>
-        <a href="../html/consulta.html" class="btn-consulta active">Agendar Consulta</a>
-    </header>
+     <header>
+  <div class="logo">
+    <a href="../index.html">
+     <img src="../media/logo.png" alt="logo" />
+      <img src="../media/IronMind.png" alt="logo" />
+    </a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+  <nav class="nav-mobile">
+    <ul class="nav-links">
+      <li><a href="../index.html" class="active">Inicio</a></li>
+      <li><a href="../html/treinosmelhor.html">Treinos</a></li>
+      <li><a href="../html/contato.html">Contato</a></li>
+      <li><a href="../html/equipe.html">Equipe</a></li>
+      <li><a href="../html/planoalimentar.html">Plano Alimentar</a></li>
+      <li><a href="../html/objetivotreino.html">Objetivo de Treino</a></li>
+      <li><a href="../html/imc.html">IMC</a></li>
+      <li><a href="../html/progressao.html">Progressão</a></li>
+    </ul>
+  </nav>
+  <a href="../html/consulta.html" class="btn">Agendar Consulta</a>
+</header>
     <section class="hero">
         <div class="hero-content">
             <h1>Vamos agendar seu treino ?</h1>
         </div>
     </section>
-</body>
-
-<main>
- <h1>Agenda de Treinos</h1>
-  <form id="form-treinos">
-    <div class="dias-container">
-      <!-- Gerado via JS -->
-    </div>
-    <button type="submit">Mostrar Treino da Semana</button>
-  </form>
-
-  <div id="resultado">
-    <!-- Treinos exibidos aqui -->
-  </div>
+    
+    <main>
+        <h1>Agenda de Treinos</h1>
+        <form id="form-treinos">
+            <div class="dias-container">
+                <!-- Gerado via JS -->
+            </div>
+            <button type="submit">Mostrar Treino da Semana</button>
+        </form>
+        
+        <div id="resultado">
+            <!-- Treinos exibidos aqui -->
+        </div>
 
   <script src="../js/agennda.js"></script>
 </main>
@@ -80,24 +81,26 @@
             <h3>Contato</h3>
             <ul>
                 <li><a href="tel:+5511999999999">(11)
-                        99999-9999</a></li>
-                <li><a
+                    99999-9999</a></li>
+                    <li><a
                         href="mailto:contato@ironmind.com">contato@ironmind.com</a></li>
-                <li><a href="#">Av. Paulista, 1000 - São Paulo</a></li>
-            </ul>
-        </div>
-        <div class="footer-column">
-            <h3>Redes Sociais</h3>
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">YouTube</a></li>
-                <li><a href="#">Twitter</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyright">
+                        <li><a href="#">Av. Paulista, 1000 - São Paulo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
         <p>&copy; 2025 IronMind. Todos os direitos reservados.</p>
     </div>
 </footer>
+<script src="../js/navDinamico.js"></script>
+</body>
 </html>
