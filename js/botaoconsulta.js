@@ -63,8 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     return true;
 }
-
-
     // Valida data
     function validateDate() {
         const selected = new Date(document.getElementById('date').value);
