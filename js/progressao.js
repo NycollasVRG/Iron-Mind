@@ -1,105 +1,92 @@
 document.addEventListener('DOMContentLoaded', () => {
-let semanas = [];
-let cargas = [];
+  const API_URL = "http://localhost:3000/progressoTreino";
+  let grafico;
 
-let grafico;
+  async function carregarDados() {
+    try {
+      const response = await fetch(API_URL);
+      const dados = await response.json();
 
-  // Função para carregar os dados do localStorage ao abrir a página
-  function carregarDados() {
-    const dadosSalvos = localStorage.getItem('progressoTreino');
-    if (dadosSalvos) {
-      const dados = JSON.parse(dadosSalvos);
-      semanas = dados.semanas || [];
-      cargas = dados.cargas || [];
-    }
-  }
+      const semanas = dados.map(item => item.semana);
+      const cargas = dados.map(item => item.carga);
 
-  // Função para salvar os dados no localStorage
-  function salvarDados() {
-    const dados = { semanas, cargas };
-    localStorage.setItem('progressoTreino', JSON.stringify(dados));
-  }
+      const ctx = document.getElementById('grafico').getContext('2d');
 
-  carregarDados();
+      if (grafico) grafico.destroy(); // Remove gráfico antigo
 
-  // Criação de gráfico com os dados carregados
-  const ctx = document.getElementById('grafico').getContext('2d');
-  grafico = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: semanas,
-      datasets: [{
-        label: 'Carga (kg)',
-        data: cargas,
-        backgroundColor: 'rgba(255, 107, 0, 0.6)',
-        borderColor: 'rgba(255, 107, 0, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Carga (kg)'
-          }
+      grafico = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: semanas,
+          datasets: [{
+            label: 'Carga (kg)',
+            data: cargas,
+            backgroundColor: 'rgba(255, 107, 0, 0.6)',
+            borderColor: 'rgba(255, 107, 0, 1)',
+            borderWidth: 1
+          }]
         },
-        x: {
-          title: {
-            display: true,
-            text: 'Semana'
+        options: {
+          responsive: true,
+          scales: {
+            y: { beginAtZero: true, title: { display: true, text: 'Carga (kg)' } },
+            x: { title: { display: true, text: 'Semana' } }
           }
         }
+      });
+
+    } catch (error) {
+      console.error("Erro ao carregar dados:", error);
+    }
+  }
+
+  async function salvarDado(semana, carga) {
+    try {
+      await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ semana, carga })
+      });
+    } catch (error) {
+      console.error("Erro ao salvar:", error);
+    }
+  }
+
+  async function limparProgressoAPI() {
+    try {
+      const response = await fetch(API_URL);
+      const dados = await response.json();
+      for (let item of dados) {
+        await fetch(`${API_URL}/${item.id}`, { method: "DELETE" });
       }
+    } catch (error) {
+      console.error("Erro ao limpar progresso:", error);
     }
-  });
-
-  // Função para adicionar uma nova carga
-window.adicionarCarga = function () {
-  const semanaInput = document.getElementById('semana').value;
-  const cargaInput = document.getElementById('carga').value;
-
-  const semanaNum = parseInt(semanaInput);
-  const cargaNum = parseFloat(cargaInput);
-
-  if (!semanaNum || !cargaInput) {
-    alert("Preencha os dois campos corretamente.");
-    return;
   }
 
-  const novaSemana = 'Semana ' + semanaNum;
+  window.adicionarCarga = async function() {
+    const semanaNum = parseInt(document.getElementById('semana').value);
+    const cargaNum = parseFloat(document.getElementById('carga').value);
 
-  // Encontrar índice de inserção (antes da próxima semana maior)
-  let index = semanas.findIndex(s => {
-    const num = parseInt(s.replace('Semana ', ''));
-    return num > semanaNum;
-  });
+    if (!semanaNum || !cargaNum) {
+      alert("Preencha os dois campos corretamente.");
+      return;
+    }
 
-  // Se não achou posição (ou é o maior), adiciona no final
-  if (index === -1) {
-    semanas.push(novaSemana);
-    cargas.push(cargaNum);
-  } else {
-    semanas.splice(index, 0, novaSemana);
-    cargas.splice(index, 0, cargaNum);
+    await salvarDado('Semana ' + semanaNum, cargaNum);
+    await carregarDados();
+
+    document.getElementById('semana').value = '';
+    document.getElementById('carga').value = '';
   }
 
-  salvarDados();
-  grafico.update();
-
-  document.getElementById('semana').value = '';
-  document.getElementById('carga').value = '';
-};
-
-  // Função para limpar o progresso
-  window.limparProgresso = function () {
+  window.limparProgresso = async function() {
     if (confirm("Tem certeza que deseja limpar a progressão semanal?")) {
-      localStorage.removeItem('progressoTreino');
-      semanas.length = 0;
-      cargas.length = 0;
-      grafico.update();
+      await limparProgressoAPI();
+      await carregarDados();
     }
-  };
+  }
+
+  // Carrega os dados assim que abrir a página
+  carregarDados();
 });

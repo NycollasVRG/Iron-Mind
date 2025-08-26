@@ -33,5 +33,22 @@
       "status": "Agendada",
       "dataAgendamento": "2025-08-25T21:05:25.034Z"
     }
+  ],
+  "progressoTreino": [
+    {
+      "id": "76ac",
+      "semana": "Semana 1",
+      "carga": 50
+    },
+    {
+      "id": "c2d3",
+      "semana": "Semana 2",
+      "carga": 55
+    },
+    {
+      "id": "2373",
+      "semana": "Semana 3",
+      "carga": 60
+    }
   ]
 }
