@@ -18,7 +18,7 @@
       "tipoConsulta": "Personal Trainer",
       "data": "2025-08-26",
       "hora": "17:00",
-      "status": "Agendada",
+      "status": "Confirmado",
       "dataAgendamento": "2025-08-25T21:02:03.278Z"
     },
     {
@@ -30,8 +30,20 @@
       "tipoConsulta": "Personal Trainer",
       "data": "2025-08-26",
       "hora": "18:00",
-      "status": "Agendada",
+      "status": "Confirmado",
       "dataAgendamento": "2025-08-25T21:05:25.034Z"
+    },
+    {
+      "id": "1a17",
+      "nome": "joao lucas",
+      "email": "joaolucad@gmail.com",
+      "telefone": "(88) 9880-2222",
+      "idade": "30",
+      "tipoConsulta": "Fisioterapia",
+      "data": "2025-09-01",
+      "hora": "16:00",
+      "status": "Agendada",
+      "dataAgendamento": "2025-08-28T16:28:42.768Z"
     }
   ],
   "progressoTreino": [
